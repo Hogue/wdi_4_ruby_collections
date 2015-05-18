@@ -167,6 +167,7 @@ We have to use the former syntax if a key isn't a symbol.
 
 ### Hash constructor syntax
 
+```ruby
 [1] pry(main)> counters = Hash.new(0)
 => {}
 [2] pry(main)> scores = Hash.new(0)
@@ -178,7 +179,7 @@ We have to use the former syntax if a key isn't a symbol.
 [5] pry(main)> scores[:yankees]
 => 0
 [6] pry(main)>
-
+```
 
 ### Brainstorm
 
