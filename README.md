@@ -40,43 +40,45 @@ Ruby arrays are used to store and manipulate generalized lists
 There are multiple ways to create a new array.
 
 ```ruby
-[1] pry(main)> group1 = []
+[1] pry(main)> friends = []
 => []
-[2] pry(main)> group1 = Array.new
+[2] pry(main)> friends = Array.new
 => []
-[3] pry(main)> group1 = Array.new(3)
+[3] pry(main)> friends = Array.new(3)
 => [nil, nil, nil]
-[4] pry(main)> group1 = Array.new(3, "")
+[4] pry(main)> friends = Array.new(3, "")
 => ["", "", ""]
-[5] pry(main)> group1.clear
+[5] pry(main)> friends.clear
 => []
-[6] pry(main)> group1
+[6] pry(main)> friends
 => []
 ```
 
 And multiple ways to add entries.
 
 ```ruby
-[7] pry(main)> group1 << "Amy"
+[7] pry(main)> friends << "Amy"
 => ["Amy"]
-[8] pry(main)> group1[group1.length] = "Bob"
+[8] pry(main)> friends[friends.length] = "Bob"
 => "Bob"
-[9] pry(main)> group1.push "Chris"
+[9] pry(main)> friends.push "Chris"
 => ["Amy", "Bob", "Chris"]
-[10] pry(main)> group2 = "Amy, Chris, Daryl".split /\W+/
+[10] pry(main)> coworkers = "Amy, Chris, Daryl".split /\W+/
 => ["Amy", "Chris", "Daryl"]
 ```
 
 And powerful operations expressed simply
 
 ```ruby
-[11] pry(main)> group1 - group2
+[11] pry(main)> friends - coworkers
 => ["Bob"]
-[12] pry(main)> group1 + group2
+[12] pry(main)> friends + coworkers
 => ["Amy", "Bob", "Chris", "Amy", "Chris", "Daryl"]
-[13] pry(main)> group1 | group2
+[13] pry(main)> (friends + coworkers).sort.uniq
 => ["Amy", "Bob", "Chris", "Daryl"]
-[14] pry(main)>
+[14] pry(main)> friends | coworkers
+=> ["Amy", "Bob", "Chris", "Daryl"]
+[15] pry(main)>
 ```
 
 And other ways to create arrays that we'll talk about later.
