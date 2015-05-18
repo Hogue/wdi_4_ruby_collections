@@ -165,6 +165,21 @@ Any object may be used as a key in a Hash.  Symbols are unique objects throughou
 ```
 We have to use the former syntax if a key isn't a symbol.
 
+### Hash constructor syntax
+
+[1] pry(main)> counters = Hash.new(0)
+=> {}
+[2] pry(main)> scores = Hash.new(0)
+=> {}
+[3] pry(main)> scores[:boston]
+=> 0
+[4] pry(main)> scores[:boston] += 1
+=> 1
+[5] pry(main)> scores[:yankees]
+=> 0
+[6] pry(main)>
+
+
 ### Brainstorm
 
 What could we store in a hash?
@@ -173,8 +188,7 @@ What would we use to store hashes?
 
 ###  Pair and share
 
-Create a file called hashes.rb.
-
+Create a file called hashes.rb.  Create a few hashes using examples from the brainstorm.  Read/update/delete values in those hashes.  What happens
 
 ## Pry lab (hashes)
 
@@ -186,10 +200,8 @@ Create a file called hashes.rb.
 - Type `exit` to resume program execution.
 - Try typing `exit` without changing anything to see what happens.
 - When you get to the bottom of the lab, you're done.
-====
-:symbol versus {symbol:'value'}, old{:symbol=>'value'} in hash lesson (syntactic sugar again)
-
 
 
 ## Enumerable
 
+TBD
